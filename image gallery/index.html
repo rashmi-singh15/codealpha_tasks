@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>Responsive Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('nature')">Nature</button>
+    <button onclick="filterGallery('city')">City</button>
+    <button onclick="filterGallery('people')">People</button>
+  </div>
+
+  <!-- Image Grid -->
+  <div class="gallery">
+    <div class="image nature">
+      <img src="image/nature1.jpg" alt="Nature 1" onclick="openLightbox(this)">
+      </div>
+    <div class="image nature">
+      <img src="image/nature2.jpg" alt="Nature 2" onclick="openLightbox(this)">
+    </div>
+    <div class="image city">
+      <img src="image/city1.jpg" alt="city 1" onclick="openLightbox(this)">
+    </div>
+    <div class="image city">
+      <img src="image/city2.jpg" alt="city 2" onclick="openLightbox(this)">
+    </div>
+    <div class="image people">
+      <img src="image/people1.jpg" alt="People 1" onclick="openLightbox(this)">
+    </div>
+    <!-- Add more images with appropriate category classes -->
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="">
+    <div class="nav">
+      <span class="prev" onclick="changeImage(-1)">❮</span>
+      <span class="next" onclick="changeImage(1)">❯</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
